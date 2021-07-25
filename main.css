@@ -66,3 +66,7 @@ header {
 #calculator button:active{
     background-color: #084f88;;
 }
+
+#calculator button:focus{
+    outline: none;
+}
