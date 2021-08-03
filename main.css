@@ -1,72 +1,72 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: 'Roboto', open-sans;
+html {
+  font-family: "Roboto", open-sans;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    background-color: #023d6d;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    width : 100%;
+  background-color: #023d6d;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  width: 100%;
 }
 
 #calculator,
 #results {
-    margin : 2rem auto;
-    width : 40rem;
-    max-width: 90%;
-    border: 1px solid #023d6d;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    color: #023d6d;
+  margin: 2rem auto;
+  width: 40rem;
+  max-width: 90%;
+  border: 1px solid #023d6d;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  color: #023d6d;
 }
 
 #calc-actions {
-    margin-top: 1rem;
-    text-align: center;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 #calculator input {
-    font-family: inherit;
-    font-size: 3rem;
-    color: #023d6d;
-    width : 10rem;
-    border: 2px solid #023d6d;
-    text-align: center;
-    padding: 0.15rem;
-    margin: auto;
-    display: block;
+  font-family: inherit;
+  font-size: 3rem;
+  color: #023d6d;
+  width: 10rem;
+  border: 2px solid #023d6d;
+  text-align: center;
+  padding: 0.15rem;
+  margin: auto;
+  display: block;
 }
 
-#calculator input:focus{
-    outline: none;
+#calculator input:focus {
+  outline: none;
 }
 
-#calculator button{
-    font: inherit;
-    background-color: #023d6d;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    width: 4rem;
+#calculator button {
+  font: inherit;
+  background-color: #023d6d;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  width: 4rem;
 }
 
 #calculator button:hover,
-#calculator button:active{
-    background-color: #084f88;;
+#calculator button:active {
+  background-color: #084f88;
 }
 
-#calculator button:focus{
-    outline: none;
+#calculator button:focus {
+  outline: none;
 }
