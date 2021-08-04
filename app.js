@@ -32,36 +32,44 @@ function writeToLog(operationId, prevResult, operationNumber, newResult) {
   console.log(logEntries);
 }
 
-function add() {
+function calculateResult(calculationType) {
   const enteredNumber = parseInt(userInput.value);
   const initResult = currentResult;
-  currentResult = currentResult + enteredNumber;
-  creatAndWriteOutput('+', initResult, enteredNumber);
-  writeToLog('Add', initResult, enteredNumber, currentResult);
+  let mathOperator = '';
+  if (calculationType === 'Add') {
+    currentResult += enteredNumber;
+    mathOperator = '+';
+  } else if (calculationType === 'Subtract') {
+    currentResult -= enteredNumber;
+    mathOperator = '-';
+  } else if (calculationType === 'Multiply') {
+    currentResult *= enteredNumber;
+    mathOperator = '*';
+  } else if (calculationType === 'Divide'){
+    currentResult /= enteredNumber;
+    mathOperator = '/';
+  } else {
+    console.log('Invalid calculation Ln:52');
+  }
+
+  creatAndWriteOutput(mathOperator, initResult, enteredNumber);
+  writeToLog(calculationType, initResult, enteredNumber, currentResult);
+}
+
+function add() {
+  calculateResult('Add');
 }
 
 function subtract() {
-  const enteredNumber = parseInt(userInput.value);
-  const initResult = currentResult;
-  currentResult = currentResult - enteredNumber;
-  creatAndWriteOutput('-', initResult, enteredNumber);
-  writeToLog('Subtract', initResult, enteredNumber, currentResult);
+  calculateResult('Subtract');
 }
 
 function multiply() {
-  const enteredNumber = parseInt(userInput.value);
-  const initResult = currentResult;
-  currentResult = currentResult * enteredNumber;
-  creatAndWriteOutput('*', initResult, enteredNumber);
-  writeToLog('Multiply', initResult, enteredNumber, currentResult);
+  calculateResult('Multiply');
 }
 
 function divide() {
-  const enteredNumber = parseInt(userInput.value);
-  const initResult = currentResult;
-  currentResult = currentResult / enteredNumber;
-  creatAndWriteOutput('/', initResult, enteredNumber);
-  writeToLog('Divide', initResult, enteredNumber, currentResult);
+  calculateResult('Divide');
 }
 
 
